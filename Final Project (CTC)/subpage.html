@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="zombie1.png"> <!-- Icon on tab -->
+    <title>Dead Man Army - About</title>
+
+    <style>
+        /* Link button styling */
+        .linkbutton a {
+            display: inline-block;
+            background-color: #9c0000;
+            color: white;
+            padding: 10px 5px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .linkbutton a:hover {
+            background-color: #e70000;
+            transform: translateY(-2px);
+        }
+
+        .linkbutton a:active {
+            background-color: #b50000;
+            transform: translateY(1px);
+        }
+
+        /* General body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        h1 {
+            color: rgb(255, 255, 255);
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Main wrapper for lore buttons */
+        .wrapper {
+            width: 900px;
+            margin: 20px auto;
+            padding: 40px;
+            background: rgb(0, 64, 16);
+            border: 10px solid rgba(0, 255, 0, 0.158);
+            border-radius: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .wrapper2 {
+            width: 900px;
+            margin: 20px auto;
+            padding: 40px;
+            background: rgb(0, 64, 16);
+            border: 10px solid rgb(0, 255, 0, 0.158);
+            border-radius: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .linkbutton {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .linkbutton a {
+            width: 45%;
+        }
+
+        /* Smaller text for instructions */
+        .smaller {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Image styling */
+        .center {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .medium {
+            width: 500px;
+            margin-top: 20px;
+        }
+
+        .small {
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        .message {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Lore Buttons Section -->
+    <main class="wrapper">
+        <h1>Dead Man Army - Game</h1>
+        <p class="smaller">
+            Learn more about this game...
+        </p>
+
+        <!-- Navigation Links -->
+        <p class="linkbutton">
+            <a href="index.html" class="left">Play Game</a>
+            <a href="subpage2.html" class="right">Learn About the Zombies</a>
+        </p>
+    </main>
+
+    <!-- Game Description Section -->
+    <main class="wrapper2">
+        <h1>About the Game</h1>
+        <p>You are the last and sole line of defense against the never-ending horde of zombies that are coming your way.
+            Armed with only a pistol, your task is to hold the incoming waves of zombies as long as possible while others
+            evacuate.</p>
+        <p>However, as you begin to successfully kill more and more zombies, the stakes will only get harder and harder until
+            you are inevitably overwhelmed...</p>
+
+        <h1>How to Play:</h1>
+        <p class="smaller">Keys A / D: Move Left and Right</p>
+        <p class="smaller">Mouse: Aim & Shoot (Left Click)</p>
+
+        <!-- Player Image -->
+        <img class="small mysteryboba2" src="player.png" alt="Instructions Image">
+
+        <p class="message"></p>
+    </main>
+
+</body>
+
+</html>

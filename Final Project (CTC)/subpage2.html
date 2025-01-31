@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dead Man Army - Zombie Classification</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="1f9cb.png"> <!-- Icon on tab -->
+        <style>
+            /* Unified Typography */
+            body {
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #090909;
+                color: white;
+            }
+
+            .wrapper, .wrapper2 {
+                position: relative;
+                width: 900px;
+                margin: 20px auto;
+                padding: 40px;
+                box-sizing: border-box;
+                border-radius: 15px;
+                background: linear-gradient(135deg, #2e7d32, #032905);
+                border: 20px solid rgba(255, 0, 0, 0.61);
+                box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+                overflow: hidden;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .center {
+                text-align: center;
+            }
+
+            .linkbutton a {
+                display: inline-block;
+                background-color: #9c0000;
+                color: white;
+                padding: 10px 15px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 20px;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                transition: background-color 0.3s ease, transform 0.2s ease;
+            }
+
+            .linkbutton a:hover {
+                background-color: #e70000;
+                transform: translateY(-2px);
+            }
+
+            .linkbutton a:active {
+                background-color: #b50000;
+                transform: translateY(1px);
+            }
+
+            .small {
+                display: block;
+                margin: 10px auto;
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+
+            .smaller {
+                text-align: center;
+                font-size: 0.9em;
+            }
+
+            .message {
+                text-align: center;
+                font-weight: bold;
+                margin-top: 10px;
+                font-size: 1.1em;
+            }
+        </style>
+    </head>
+    <body>
+        <main class="wrapper">
+            <p class="linkbutton center">
+                <a href="subpage.html">About the Game</a>
+                <a href="index.html">Play Game</a>
+            </p>
+            <h1>Zombies:</h1>
+            <p><strong>As a person who is fighting for their life against endless hordes of zombies, it is important to know what kind of zombies they are dealing with...</strong></p>
+        </main>
+
+        <main class="wrapper2">
+            <h1>Explore:</h1>
+            <p class="smaller">Click on the zombie below to learn more about it!</p>
+            <img class="small mysteryboba3" src="zombie1.png" alt="Zombie 1">
+            <p class="message"></p>
+        </main>
+
+        <main class="wrapper2">
+            <h1>Explore:</h1>
+            <p class="smaller">Click on the zombie below to learn more about it!</p>
+            <img class="small mysteryboba4" src="zombie2.png" alt="Zombie 2">
+            <p class="message2"></p>
+        </main>
+
+        <main class="wrapper2">
+            <h1>Explore:</h1>
+            <p class="smaller">Click on the zombie below to learn more about it!</p>
+            <img class="small mysteryboba5" src="zombie3.png" alt="Zombie 3">
+            <p class="message3"></p>
+        </main>
+
+        <script>
+            const zombieData = [
+                {
+                    selector: ".mysteryboba3",
+                    message: "Infected - Former humans afflicted by a mysterious zombie virus. Though they walk at a moderate pace, let alone a slow one, they are dangerous in groups if not individually. Please put these poor souls out of their misery."
+                },
+                {
+                    selector: ".mysteryboba4",
+                    message: "Rushers - Freshly turned zombies that while have been infected, are able to run much faster than an average infected. They lack brute strength but compensate with their incredible speed. Keeping distance is key."
+                },
+                {
+                    selector: ".mysteryboba5",
+                    message: "Juggernauts - Heavily mutated, tank-like zombies. Slow, but able to withstand significant damage, acting as shields for the horde. These unique infected bonded with the virus so well that their bodies mutated into large tanks."
+                }
+            ];
+
+            zombieData.forEach((zombie, index) => {
+                const imgElement = document.querySelector(zombie.selector);
+                const messageElement = document.querySelector(`.message${index === 0 ? "" : index + 1}`);
+                imgElement.addEventListener("click", () => {
+                    messageElement.innerText = zombie.message;
+                });
+            });
+        </script>
+    </body>
+</html>
+

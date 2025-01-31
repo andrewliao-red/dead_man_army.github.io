@@ -1,0 +1,96 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #000; /* Fallback background color */
+}
+
+canvas {
+  display: block;
+  margin: 0 auto; /* Center the canvas horizontally */
+  background: url('mapz.png') no-repeat center center; /* Add the background image */
+  background-size: contain; /* Ensure the image fits inside the canvas without stretching */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow around the canvas */
+  border: 5px solid #333; /* Optional: Add a border to the canvas */
+}
+
+/* Title screen styling */
+#titleScreen {
+  width: 700px;
+  height: 600px;
+  background: #222222;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #008805;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#startButton {
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Apply font */
+}
+
+#startButton:hover {
+  background-color: darkgreen;
+}
+
+/* Styling for in-game text */
+#gameText {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Apply font */
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;  /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+}
+
+#gameText span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Pause screen styling */
+#pauseScreen {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 50px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper, .wrapper2 {
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: 3px solid red; /* Red border */
+  background: linear-gradient(135deg, #2e7d32, #032905); /* Green Gradient */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden; /* Ensures circles stay within wrapper */
+}
+
+/* Circle Styling */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(0, 50, 0, 0.8); /* Default dark green */
+  opacity: 0.5;
+  pointer-events: none; /* Ensures circles don’t interfere with content */
+}
